@@ -53,7 +53,7 @@ Bond's right hand at MI6. Operates in two modes:
 
 **Greeter** -- scans the project structure and gives you a brief summary of what it found. Useful for getting oriented in an unfamiliar codebase.
 
-**README Generator** -- analyzes the full codebase (structure, language/framework, source files, config) and generates or updates a comprehensive `README.md`.
+**README Generator** -- analyzes the full codebase (structure, language/framework, source files, config) and generates or updates a comprehensive `README.md`. Always signs off with a Bond-inspired tagline.
 
 - **Tools:** Read, Grep, Glob, Write
 - **Model:** session default
@@ -195,4 +195,4 @@ See the [Claude Code documentation](https://docs.anthropic.com/claude-code) for 
 [MIT](LICENSE)
 
 ---
-> *Every good operation starts with the right dossier.*
+> *The world is not enough -- but this README should be.*
