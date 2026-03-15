@@ -1,10 +1,10 @@
-# agent-bond
+# 00-agents
 
 A collection of reusable Claude Code sub-agents for common development tasks.
 
 ## Overview
 
-`agent-bond` is a repository of Claude Code agent definitions stored under `.claude/agents/`. These agents extend Claude Code with specialized, scoped behaviors that can be invoked on demand. Each agent is defined as a Markdown file with a YAML front matter header that declares its name, description, available tools, and optionally a preferred model.
+`00-agents` is a repository of Claude Code agent definitions stored under `.claude/agents/`. These agents extend Claude Code with specialized, scoped behaviors that can be invoked on demand. Each agent is defined as a Markdown file with a YAML front matter header that declares its name, description, available tools, and optionally a preferred model.
 
 ## Table of Contents
 
@@ -33,19 +33,19 @@ A collection of reusable Claude Code sub-agents for common development tasks.
 Clone the repository and copy the agent definitions into your project or home directory:
 
 ```bash
-git clone https://github.com/kevinwu/agent-bond.git
+git clone https://github.com/KaizenXIII/00-agents.git
 ```
 
 **Project-level** (agents available in one project):
 
 ```bash
-cp -r agent-bond/.claude/agents/ /path/to/your/project/.claude/agents/
+cp -r 00-agents/.claude/agents/ /path/to/your/project/.claude/agents/
 ```
 
 **User-level** (agents available in all projects):
 
 ```bash
-cp -r agent-bond/.claude/agents/ ~/.claude/agents/
+cp -r 00-agents/.claude/agents/ ~/.claude/agents/
 ```
 
 Claude Code automatically discovers agent definitions in both locations.
@@ -74,7 +74,7 @@ Bond's right hand at MI6. A dual-purpose agent that operates in two modes:
 **Mode 2 -- README Generator:** Analyzes the full codebase -- project structure, language/framework, key source files, CI config -- and generates or updates a comprehensive `README.md`. Includes a Bond-themed signature with timestamp.
 
 - **Tools:** `Read`, `Grep`, `Glob`, `Write`
-- **Model:** `inherit`
+- **Model:** session default (no override)
 - **Aliases:** `money-penny`, `money`, `penny`, `mp`
 
 ```
@@ -155,4 +155,4 @@ License not yet specified. Add a `LICENSE` file to this repository to clarify te
 
 ---
 
-> *Three agents, no time to debug. 2026-03-15 13:41 PDT*
+> *A view to a merge. 2026-03-15 13:58 PDT*
