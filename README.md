@@ -23,6 +23,7 @@ A collection of reusable Claude Code sub-agents for common development tasks.
 - Each agent is self-contained with its own tool permissions and instructions
 - Agents can be invoked by name during any Claude Code session
 - Works at both project level (`.claude/agents/`) and user level (`~/.claude/agents/`)
+- Git pre-push hook auto-syncs agents to `~/.claude/agents/` so they stay available globally
 
 ## Prerequisites
 
@@ -49,6 +50,10 @@ cp -r agent-bond/.claude/agents/ ~/.claude/agents/
 ```
 
 Claude Code automatically discovers agent definitions in both locations.
+
+### Auto-sync with pre-push hook
+
+This repo includes a Git pre-push hook that copies agent definitions to `~/.claude/agents/` before every push. If you develop agents in this repo, they stay in sync globally without manual copying. The hook is located at `.git/hooks/pre-push`.
 
 ## Agents
 
@@ -83,6 +88,9 @@ Reviews a repository's codebase and generates or updates a comprehensive `README
   agents/
     greeter.md      # Hello world / smoke-test agent
     readme-gen.md   # README generation agent
+.git/
+  hooks/
+    pre-push        # Auto-syncs agents to ~/.claude/agents/
 README.md
 ```
 
@@ -133,4 +141,4 @@ License not yet specified. Add a `LICENSE` file to this repository to clarify te
 
 ---
 
-> *Moneypenny, deploy my changes. 2026-03-15 14:45*
+> *The name's README. Gold-fingered README. 2026-03-15 15:10*
