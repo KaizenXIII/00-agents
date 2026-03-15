@@ -115,6 +115,7 @@ Claude Code automatically discovers agents in both locations. No configuration r
     q.md              # Testing and validation specialist
 scripts/
   validate-agents.sh  # Validates agent file structure
+.gitignore
 CLAUDE.md             # Project-level Claude Code config and conventions
 LICENSE               # MIT License
 README.md
@@ -176,6 +177,8 @@ bash scripts/validate-agents.sh
 ```
 
 It checks that YAML front matter exists, required fields (`name`, `description`, `tools`) are present and non-empty, and the body contains instructions. Accepts an optional directory argument (defaults to `.claude/agents`).
+
+There is no other test suite -- validation is the only quality gate.
 
 See the [Claude Code documentation](https://docs.anthropic.com/claude-code) for the full list of supported tools and model options.
 
